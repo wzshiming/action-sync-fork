@@ -1,0 +1,13 @@
+name: "Sync fork's repository"
+description: "Synchronize a Fork's repository"
+author: "wzshiming"
+inputs:
+  REPOSITORY:
+    description: "The fork's repository"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/sync-fork.sh
+      shell: bash
